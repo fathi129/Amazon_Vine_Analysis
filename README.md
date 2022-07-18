@@ -1,6 +1,8 @@
 # Amazon_Vine_Analysis
-Analyzing the Amazon reviews written by members and non-members of the paid Amazon Vine program. 
+Analyzing the Amazon reviews written by members and non-members of the paid Amazon Vine program.<br>
+
 ## Overview of the Analysis
+Big data is a combination of structured, semistructured and unstructured data collected by organizations that can be mined for information and used in machine learning projects, predictive modeling and other advanced analytics applications.Spark is an advanced and flexible ecosystem for handling BigData.Natural Language Processing is a critical big data concept and skillset because there is so much spoken and written language that needs to be translated.We use NLP in Spam filters,spell check and voice recognition technologies.PySpark is an interface for Apache Spark in Python. It not only allows you to write Spark applications using Python APIs, but also provides the PySpark shell for interactively analyzing our data in a distributed environment.We will be using Amazon Web Services which is a cloud computing platform that provides customers with a wide array of cloud services. We can define AWS (Amazon Web Services) as a secured cloud services platform that offers compute power, database storage, content delivery and various other functionalities.Here we will be using AWS Relational Database Service for performing ETL operations on the Big data.
 
 ## Purpose of the Analysis
 The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies like SellBy pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review.In this analysis, we have access to approximately 50 datasets. Each one contains reviews of a specific product, from clothing apparel to wireless products. We have picked reviews of wireless products datasets and used PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. we have used PySpark to determine if there is any bias toward favorable reviews from Vine and Non-Vine members in our dataset. 
@@ -8,40 +10,20 @@ The Amazon Vine program is a service that allows manufacturers and publishers to
 ## Resources
 DataSources: [Amazon Review datasets](https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt)<br>
 Software used: Google Colaboratory, Amazon Web Services RDS, Postgres SQL.<br>
-Language: PySpark<br>
-
-
+Technology: PySpark<br>
 
 
 ## Deliverable 1: Perform ETL on Amazon Product Reviews
-Using your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
-Follow the instructions below to complete Deliverable 1.
-
-From the following Amazon Review datasets (Links to an external site.), pick a dataset that you would like to analyze. All the datasets have the same schemata, as shown in this image:
-Create a new database with Amazon RDS just as you did in this module.
-
-In pgAdmin, create a new database in your Amazon RDS server that you just create.
-
-Download the challenge_schema.sql file to your computer.
-
-In pgAdmin, run a new query to create the tables for your new database using the code from the challenge_schema.sql file.
-
-After you run the query, you should have the following four tables in your database: customers_table, products_table, review_id_table, and vine_table.
-Download the Amazon_Reviews_ETL_starter_code.ipynb file, then upload the file as a Google Colab Notebook, and rename it Amazon_Reviews_ETL.
-First extract one of the review datasets, then create a new DataFrame.
-Next, follow the steps below to transform the dataset into four DataFrames that will match the schema in the pgAdmin tables:
-
-
-
+Using the knowledge of the cloud ETL process, we have created an AWS RDS database on the cloud,Wireless products review dataset has been picked for the analysis.The dataset has been extracted and converted to DataFrame using PySpark. we will transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then we will upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
+The Amazon Review datasets would look like the following image
+<img src = "https://github.com/fathi129/MechaCar_Statistical_Analysis/blob/master/Results/vehicle_df.png"  width = 900><br>
+We need to create a database for the Amazon RDS server in the pg admin,We need to create the following tables by running the schema,customers_table, products_table, review_id_table, and vine_table.
 
 ### The customers_table DataFrame
 
-To create the customers_table, use the code in the Amazon_Reviews_ETL_starter_code.ipynb file and follow the steps below to aggregate the reviews by customer_id.
+To create the customers_table, we need to open the Google Colab and import the PySpark Packages and the dataset is read using PySpark and converted to Dataframe.perform the steps below to aggregate the reviews by customer_id.Using the groupby() function on the customer_id column of the DataFrame we created,Count all the customer ids using the agg() function by chaining it to the groupby() function. After we use this function, a new column will be created, count(customer_id).Rename the count(customer_id) column using the withColumnRenamed() function so it matches the schema for the customers_table in pgAdmin.The final customers_table DataFrame should look like this:<br>
 
-Use the groupby() function on the customer_id column of the DataFrame you created in Step 6.
-Count all the customer ids using the agg() function by chaining it to the groupby() function. After you use this function, a new column will be created, count(customer_id).
-Rename the count(customer_id) column using the withColumnRenamed() function so it matches the schema for the customers_table in pgAdmin.
-The final customers_table DataFrame should look like this:
+<img src = "https://github.com/fathi129/MechaCar_Statistical_Analysis/blob/master/Results/vehicle_df.png"  width = 900><br>
 
 ### The products_table DataFrame
 To create the products_table, use the select() function to select the product_id and product_title, then drop duplicates with the drop_duplicates() function to retrieve only unique product_ids. Refer to the code snippet provided in the Amazon_Reviews_ETL_starter_code.ipynb file for assistance.
