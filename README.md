@@ -29,18 +29,18 @@ To create the products_table,we need to use the select() function to select the 
 
 ### The review_id_table DataFrame
 To create the review_id_table, we use the select() function to select the columns that are in the review_id_table in pgAdmin, and convert the review_date column to a YYYY_M_D date format. The final review_id_table DataFrame would look like this:<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_df.png"  width = 500><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_df.png"  width = 600><br>
 
 ### The vine_table DataFrame
 To create the vine_table, we use the select() function to select only the columns that are in the vine_table in pgAdmin.The final vine_table DataFrame should look like this:<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_df.png"  width = 500><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_df.png"  width = 600><br>
 
 ### Load the DataFrames into pgAdmin
 Make the connection to our AWS RDS instance.Load the DataFrames that correspond to tables in pgAdmin.In pgAdmin,we need to run query to check that the tables have been populated.<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customers_table.png"  width = 700><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/products_table.png"  width = 700><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_table.png"  width = 700><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_table.png"  width = 700><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customers_table.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/products_table.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_table.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_table.png"  width = 900><br>
 
 ## Deliverable 2: Determine Bias of Vine Reviews
 Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
