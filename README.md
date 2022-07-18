@@ -71,8 +71,8 @@ The total number of reviews, the number of 5-star reviews, and the percentage of
 - The percentage of non-Vine reviews were 5 stars:**47.0123%**
 
 ## Summary
-By seeing the results we can say that there is no positivity in the bias of the vine program since the number of reviews of the vine program were less compared to the non-vine program.The number of five star reviews of the vine program are also less.The percentage of five star reviews of the vine program are less compared to non vine program.
-The additional analysis that can be performed on the dataset is to calculate the mean of the five star reviews of the vine and non-vine program.By seeing the mean we can see that the average value of vine program is more than the non-vine program.We can perform the NLP Sentimental Analysis to further optimize the words from the review and to perform analysis. 
+- By seeing the results we can say that there is no positivity in the bias of the vine program since the number of reviews of the vine program were less compared to the non-vine program.The number of five star reviews of the vine program are also less.The percentage of five star reviews of the vine program are less compared to non vine program.
+- The additional analysis that can be performed on the dataset is to calculate the mean of the five star reviews of the vine and non-vine program.By seeing the mean we can see that the average value of vine program is more than the non-vine program.We can perform the NLP Sentimental Analysis to further optimize the words from the review and to get better results.<br>
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/avg%20vine%20review.png"  width = 600><br>
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20avg%20mean.png"  width = 600><br>
 
