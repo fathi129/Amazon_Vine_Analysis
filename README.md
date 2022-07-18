@@ -57,8 +57,8 @@ Filter the greater than or equal to 50% DataFrame and create a new DataFrame tha
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20review_No.png"  width = 1000><br>
 
 The total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid) is calculated 
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vinereview.png"  width = 600><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20reviews.png"  width = 600><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vinereview.png"  width = 1000><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20reviews.png"  width = 1000><br>
 
 ## Results
 ### Paid(Vine) Reviews:
@@ -73,7 +73,7 @@ The total number of reviews, the number of 5-star reviews, and the percentage of
 ## Summary
 
 In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/avg%20vine%20review.png"  width = 900><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20avg%20mean.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/avg%20vine%20review.png"  width = 600><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20avg%20mean.png"  width = 600><br>
 
 
