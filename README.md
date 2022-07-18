@@ -47,20 +47,20 @@ Using the knowledge of PySpark we will determine if there is any bias towards re
 First we need to filter the data and create a new DataFrame to retrieve all the rows where the total_votes count is equal to or greater than 20 to pick reviews that are more likely to be helpful and to avoid having division by zero errors later on.
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greater%20than%2020.png"  width = 900><br>
 
-Next we will filter the greater than 20 vote count DataFrame and create a new DataFrame to retrieve all the rows where the number of helpful_votes divided by total_votes is equal to or greater than 50%.
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greaterthan50.png"  width = 900><br>
+Next we will filter the greater than 20 vote count DataFrame and create a new DataFrame to retrieve all the rows where the number of helpful_votes divided by total_votes is equal to or greater than 50%.<br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greaterthan50.png"  width = 1000><br>
 
-Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (paid), vine == 'Y'.
+Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (paid), vine == 'Y'.<br>
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_review_Yes.png"  width = 1000><br>
 
-Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (unpaid), vine == 'N'.
+Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (unpaid), vine == 'N'.<br>
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20review_No.png"  width = 1000><br>
 
 The total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid) is calculated 
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vinereview.png"  width = 1000><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20reviews.png"  width = 1000><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vinereview.png"  width = 1100><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20reviews.png"  width = 1200><br>
 
-## Results
+## Result
 ### Paid(Vine) Reviews:
 - Total number of Vine reviews:**613**
 - The number of Vine reviews were 5 stars:**222**
