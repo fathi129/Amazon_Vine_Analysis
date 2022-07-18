@@ -21,11 +21,11 @@ We need to create a database for the Amazon RDS server in the pg admin,We need t
 
 ### The customers_table DataFrame
 To create the customers_table, we need to open the Google Colab and import the PySpark Packages and the dataset is read using PySpark and converted to Dataframe.perform the steps below to aggregate the reviews by customer_id.Using the groupby() function on the customer_id column of the DataFrame we created,Count all the customer ids using the agg() function by chaining it to the groupby() function. After we use this function, a new column will be created, count(customer_id).Rename the count(customer_id) column using the withColumnRenamed() function so it matches the schema for the customers_table in pgAdmin.The final customers_table DataFrame would look like this:<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customer_df.png"  width = 400><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customer_df.png"  width = 300><br>
 
 ### The products_table DataFrame
 To create the products_table,we need to use the select() function to select the product_id and product_title, then drop duplicates with the drop_duplicates() function to retrieve only unique product_ids.The final products_table DataFrame would look like this:<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/product_df.png"  width = 400><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/product_df.png"  width = 300><br>
 
 ### The review_id_table DataFrame
 To create the review_id_table, we use the select() function to select the columns that are in the review_id_table in pgAdmin, and convert the review_date column to a YYYY_M_D date format. The final review_id_table DataFrame would look like this:<br>
@@ -37,10 +37,10 @@ To create the vine_table, we use the select() function to select only the column
 
 ### Load the DataFrames into pgAdmin
 Make the connection to our AWS RDS instance.Load the DataFrames that correspond to tables in pgAdmin.In pgAdmin,we need to run query to check that the tables have been populated.<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customers_table.png"  width = 500><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/products_table.png"  width = 500><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_table.png"  width = 500><br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_table.png"  width = 500><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customers_table.png"  width = 700><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/products_table.png"  width = 700><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_table.png"  width = 700><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_table.png"  width = 700><br>
 
 ## Deliverable 2: Determine Bias of Vine Reviews
 Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
