@@ -43,26 +43,24 @@ Make the connection to our AWS RDS instance.Load the DataFrames that correspond 
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_table.png"  width = 1100><br>
 
 ## Deliverable 2: Determine Bias of Vine Reviews
-Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
+Using the knowledge of PySpark we will determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, we will determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
+First we need to filter the data and create a new DataFrame to retrieve all the rows where the total_votes count is equal to or greater than 20 to pick reviews that are more likely to be helpful and to avoid having division by zero errors later on.
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greater%20than%2020.png"  width = 900><br>
 
-Using either PySpark, Pandas, or SQL, follow the instructions below to complete Deliverable 2.
+Next we will filter the greater than 20 vote count DataFrame and create a new DataFrame to retrieve all the rows where the number of helpful_votes divided by total_votes is equal to or greater than 50%.
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greaterthan50.png"  width = 900><br>
 
-Filter the data and create a new DataFrame or table to retrieve all the rows where the total_votes count is equal to or greater than 20 to pick reviews that are more likely to be helpful and to avoid having division by zero errors later on.
+Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (paid), vine == 'Y'.
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greaterthan50.png"  width = 900><br>
 
-Filter the new DataFrame or table created in Step 1 and create a new DataFrame or table to retrieve all the rows where the number of helpful_votes divided by total_votes is equal to or greater than 50%.
+Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (unpaid), vine == 'N'.
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_review_Yes.png"  width = 900><br>
 
-If you use the SQL option below, you’ll need to cast your columns as floats using WHERE CAST(helpful_votes AS FLOAT)/CAST(total_votes AS FLOAT) >=0.5.
-Filter the DataFrame or table created in Step 2, and create a new DataFrame or table that retrieves all the rows where a review was written as part of the Vine program (paid), vine == 'Y'.
-
-Repeat Step 3, but this time retrieve all the rows where the review was not part of the Vine program (unpaid), vine == 'N'.
-
-Determine the total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid).
-Create a new Google Colab Notebook, and name it Vine_Review_Analysis.
-Extract the dataset you used in Deliverable 1.
-Recreate the vine_table, and perform your analysis using the steps above.
-Export your Vine_Review_Analysis Google Colab Notebook as an ipynb file, and save it to your Amazon_Vine_Analysis GitHub repository.
-
+the total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid) is calculated 
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20review_No.png"  width = 900><br>
 ## Results
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vinereview.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20reviews.png"  width = 900><br>
 
 How many Vine reviews and non-Vine reviews were there?
 How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
@@ -71,5 +69,7 @@ What percentage of Vine reviews were 5 stars? What percentage of non-Vine review
 ## Summary
 
 In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/avg%20vine%20review.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20avg%20mean.png"  width = 900><br>
 
 
