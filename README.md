@@ -51,16 +51,16 @@ Next we will filter the greater than 20 vote count DataFrame and create a new Da
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greaterthan50.png"  width = 900><br>
 
 Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (paid), vine == 'Y'.
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/greaterthan50.png"  width = 900><br>
-
-Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (unpaid), vine == 'N'.
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_review_Yes.png"  width = 900><br>
 
-the total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid) is calculated 
+Filter the greater than or equal to 50% DataFrame and create a new DataFrame that retrieves all the rows where a review was written as part of the Vine program (unpaid), vine == 'N'.
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20review_No.png"  width = 900><br>
-## Results
+
+The total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid) is calculated 
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vinereview.png"  width = 900><br>
 <img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/non-vine%20reviews.png"  width = 900><br>
+
+## Results
 
 How many Vine reviews and non-Vine reviews were there?
 How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
