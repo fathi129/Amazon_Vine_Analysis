@@ -21,19 +21,19 @@ We need to create a database for the Amazon RDS server in the pg admin,We need t
 
 ### The customers_table DataFrame
 To create the customers_table, we need to open the Google Colab and import the PySpark Packages and the dataset is read using PySpark and converted to Dataframe.perform the steps below to aggregate the reviews by customer_id.Using the groupby() function on the customer_id column of the DataFrame we created,Count all the customer ids using the agg() function by chaining it to the groupby() function. After we use this function, a new column will be created, count(customer_id).Rename the count(customer_id) column using the withColumnRenamed() function so it matches the schema for the customers_table in pgAdmin.The final customers_table DataFrame would look like this:<br>
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customer_df.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/customer_df.png"  width = 500><br>
 
 ### The products_table DataFrame
 To create the products_table,we need to use the select() function to select the product_id and product_title, then drop duplicates with the drop_duplicates() function to retrieve only unique product_ids.The final products_table DataFrame would look like this:
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/product_df.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/product_df.png"  width = 500><br>
 
 ### The review_id_table DataFrame
 To create the review_id_table, we use the select() function to select the columns that are in the review_id_table in pgAdmin, and convert the review_date column to a YYYY_M_D date format. The final review_id_table DataFrame would look like this:
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_df.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/review_id_df.png"  width = 500><br>
 
 ### The vine_table DataFrame
 To create the vine_table, we use the select() function to select only the columns that are in the vine_table in pgAdmin.The final vine_table DataFrame should look like this:
-<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_df.png"  width = 900><br>
+<img src = "https://github.com/fathi129/Amazon_Vine_Analysis/blob/master/screenshots%20for%20AWS/vine_df.png"  width = 500><br>
 
 ### Load the DataFrames into pgAdmin
 Make the connection to your AWS RDS instance.
